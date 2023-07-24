@@ -14,7 +14,7 @@ app.use(morgan('tiny'));
 app.disable('x-powered-by');
 
 const corsConfig = {
-    origin: 'http://localhost:5173/',
+    origin: 'http://localhost:5173',
     credentials: true,
     methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"]
 }
