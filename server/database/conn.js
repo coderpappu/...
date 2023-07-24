@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 import ENV from "../config.js";
 
 async function connect(){
-    const mongod = await MongoMemoryServer.create();
+    try {
+        const mongod = await MongoMemoryServer.create();
     const getUri = mongod.getUri();
 
     mongoose.set('strictQuery', true);
@@ -12,6 +13,9 @@ async function connect(){
     const db = await mongoose.connect(ENV.ATLAS_URI);
     console.log("Database Connected");
     return db;
+    } catch (error) {
+        console.log(error)
+    }
     
 }
 

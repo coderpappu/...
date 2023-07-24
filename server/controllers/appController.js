@@ -198,6 +198,10 @@ export async function createResetSession(req, res){
     return res.status(440).send({error : "Session Expired!"})
 }
 
+export async function sayHi(req, res){
+        return res.status(201).send("Hello Coder");
+        
+}
 
 // update the password when we have valid session
 /** PUT: http://localhost:8080/api/resetPassword */
