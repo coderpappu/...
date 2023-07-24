@@ -15,7 +15,7 @@ router.route('/authenticate').post(controller.verifyUser,(req,res)=> res.end());
 router.route('/login').post( controller.verifyUser ,controller.login); //login in app
 
 // GET Methods
-router.route('/checkme').get(controller.sayHi)
+
 router.route('/user/:username').get(controller.getUser); // user with username
 router.route('/generateOTP').get(controller.verifyUser,localVariables, controller.generateOTP); // generate random otp
 router.route('/verifyOTP').get(controller.verifyUser, controller.verifyOTP); // verify generated OTP
