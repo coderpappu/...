@@ -14,11 +14,9 @@ app.disable('x-powered-by');
 
 
 const corsConfig = {
-    
     origin: 'https://account-authentication-system-x1ms.vercel.app',
-  methods: 'GET, POST, PUT, DELETE',
-  allowedHeaders: 'Content-Type, Authorization',
-  credentials: true,
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE']
 }
 app.use(cors(corsConfig))
 app.options("", cors(corsConfig))
